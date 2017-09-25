@@ -1,0 +1,170 @@
+@import "bourbon";
+@import "components/vars.scss";
+@import "components/normalize.scss";
+@import "components/fonts.scss";
+// @import "components/icons.scss";
+
+*:focus::-webkit-input-placeholder {color: transparent}
+*:focus::-moz-placeholder          {color: transparent}
+*:focus:-moz-placeholder           {color: transparent}
+*:focus:-ms-input-placeholder      {color: transparent}
+
+*::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: inherit;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: inherit;
+	opacity: 1;
+}
+
+*:-ms-input-placeholder {
+	color: inherit;
+	opacity: 1;
+}
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	color: inherit;
+}
+body input:required:valid,
+body textarea:required:valid {
+	color: inherit;
+}
+*,
+*:before,
+*:after{
+	box-sizing: border-box;
+}
+
+html {
+	height: 100% !important;
+	font-size: 10px;
+}
+body {
+	position: relative;
+	min-width: 320px;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-size: 2rem;
+	line-height: 1.25;
+	font-weight: 500;
+	font-family: 'SeroPro', Verdana, sans-serif;
+	color: #000;
+	background-color: #fff;
+}
+.container {
+	max-width: 1280px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.hidden {
+	display: none;
+}
+a {
+	outline: none !important;
+	color: $red;
+}
+.button {
+	@include btn;
+	position: relative;
+	padding: 1.5rem 4rem;
+	font-size: 2rem;
+    line-height: 1;
+    font-weight: 500;
+	font-family: inherit;
+	color: #000;
+	border: .3rem solid $red;
+	border-radius: 3rem;
+	text-align: center;
+	transition: all .5s ease;
+	&:hover, &:active, &:focus {
+		background-color: $red;
+		color: #fff;
+	}
+}
+
+
+.title {
+	margin: 0;
+	font-size: 6.6rem;
+    line-height: 1;
+    font-weight: 600;
+	letter-spacing: .05em;
+	font-family: 'PT Serif';
+	word-wrap: break-word;
+	sup {
+        color: $red;
+    }
+}
+// .title_color_blue {
+// 	color: $blue;
+// }
+.subtitle {
+	margin: 4rem 0 0 0;
+	font-size: 3rem;
+	font-weight: 600;
+	color: $red;
+}
+
+//Custom Styles Here
+@import "components/menu.scss";
+@import "components/header.scss";
+@import "components/about.scss";
+@import "components/advantages.scss";
+@import "components/research.scss";
+@import "components/banner.scss";
+@import "components/result.scss";
+@import "components/action.scss";
+@import "components/formula.scss";
+
+// @import "components/effects.scss";
+// @import "components/carefully.scss";
+// @import "components/causes.scss";
+
+// @import "components/instruction.scss";
+// @import "components/questions.scss";
+// @import "components/footer.scss";
+@import "components/popup.scss";
+
+@media only screen and (max-width : 1280px) {
+    html {
+        font-size: 9px;
+    }
+}
+@media only screen and (max-width : 992px) {
+    html {
+        font-size: 8px;
+    }
+    .title {
+        font-size: 5rem;
+    }
+}
+@media only screen and (max-width : 480px) {
+    .title {
+        font-size: 4rem;
+    }
+}
+
+
+
+//ALWAYS END
+//@import "components/media.scss";
+
+//Load Libs SASS
+//@import "html/libs/animate/animate.sass";
+//@import "html/libs/owl.carousel/dist/assets/owl.carousel.min";
+//@import "html/libs/superfish/dist/css/superfish";
+//@import "html/libs/font-awesome/scss/font-awesome.scss";
+//@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
+@import "build/scss/components/magnific-popup.scss";
+@import "html/libs/magnific-popup/dist/magnific-popup";

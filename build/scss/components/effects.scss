@@ -1,0 +1,160 @@
+.effects {
+    padding: 6rem 0 3rem 0;
+    overflow: hidden;
+}
+.effects__container {
+
+}
+.effects__box {
+    display: flex;
+    align-items: center;
+    margin: 4rem 0 0 0;
+}
+.effects__text {
+    flex: 0 1 auto;
+    width: 41%;
+    margin: 0 0 0 -6%;
+    padding: 10rem 6%;
+    &:after {
+        content: '';
+        display: block;
+        width: 6rem;
+        height: 1.3rem;
+        margin: 4rem 0 0 0;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAAOCAYAAACfOxrCAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NTEzOTM1RkQxQzc0MTFFN0FEQ0I4REIyN0UzQjU0QUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NTEzOTM1RkUxQzc0MTFFN0FEQ0I4REIyN0UzQjU0QUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1MTM5MzVGQjFDNzQxMUU3QURDQjhEQjI3RTNCNTRBRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1MTM5MzVGQzFDNzQxMUU3QURDQjhEQjI3RTNCNTRBRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrPUX0cAAAF+SURBVHjazJe9SgNBFIVXAilstPQBAjYKvoTY2YrYpkljGoUtfIDBF7CxSLOVhSKpU9mk0sonsIuCnSDIeC7OwGaZmfsTQS8cUmRO9n4fIbupqj8c7/0asmXsnSLrht4V4lJv9iiGZai3b4SgZV6QgaFHM5NK6PT8koQA0YT0lPBN+MCREcJLJSR6IgmZ3o+EDoSXSkj0aM6EvevEMkUJBYiiBKZ3WSUgaO6QvhI+Tm3sRQnbSog4D8iGoufioTpz4D4lQQCRlCDs0SyQXSV8nHmUIIJvXUQkQQGxJIHpfeQkMBC021dGwqYYXiqBgXjOSWB6LoAuMhJuShB4PclIeFXBCyU0Bch+OJOaR26ZggQWoiBBBy+QwH3NScKtBUIhwWV25iQ47UPKuQZe+RtxUbhuSYJjdj5GPleGb33gSAO/6i2y1d8Jt0M1BM4ddiTY4BkJtfEhqVZcd4BMkSdkrNx5jx7IkIPf+sMyRN6Qd80yQcIYmSBH1T+dbwEGADkWEWlh/mU2AAAAAElFTkSuQmCC');
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    font-size: 2.4rem;
+    line-height: 1.4;
+    font-weight: 600;
+    font-family: 'Panton';
+    color: #fff;
+    text-shadow: 1px 1px 0 $pink;
+    background-image: url(../img/bg-effects-text.png);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+.effects__list {
+    flex: 0 1 auto;
+    width: 60%;
+    margin: 0 0 0 5%;
+    padding: 0;
+    list-style: none;
+}
+
+.effects__list-item {
+    position: relative;
+    padding:  0 0 0 8rem;
+    margin: 6rem 0 0 0;
+    &:first-child {
+        margin-top: 0;
+    }
+    &:nth-child(even) {
+        .effects__list-icon {
+            &:before {
+                background-image: url(../img/bg-icon-spot-pink.png);
+            }
+        }
+    }
+    &:nth-child(3n+1) {
+        .effects__list-icon {
+            &:before {
+                transform: rotate(45deg);
+            }
+        }
+    }
+    &:nth-child(3n+2) {
+        .effects__list-icon {
+            &:before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+    &:nth-child(3n+3) {
+        .effects__list-icon {
+            &:before {
+                transform: rotate(135deg);
+            }
+        }
+    }
+    &:nth-child(3n+4) {
+        .effects__list-icon {
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+.effects__list-icon {
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    transform: translate(-50%, -50%);
+    width: 6rem;
+    height: 6rem;
+    margin: 0;
+    line-height: 6rem;
+    text-align: center;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-image: url(../img/bg-icon-spot-blue.png);
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+.effects__list-text {
+    margin: 0;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .effects__box {
+        display: block;
+    }
+    .effects__text {
+        margin: 0;
+        width: auto;
+        padding: 10rem 8rem;
+    }
+    .effects__list {
+        margin: 4rem 0 0 0;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

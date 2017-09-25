@@ -1,0 +1,113 @@
+.specification {
+    padding: 7rem 0;
+    width: 100%;
+    background-color: #787982;
+    background-image: url(../img/bg-menu.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.specification__container {
+
+}
+.specification__box {
+    width: 45%;
+}
+.specification__title {
+    margin: 0;
+    font-size: 2.6rem;
+    font-weight: 600;
+    font-family: 'PT Serif';
+}
+.specification__info {
+    padding: 0;
+    margin: 4rem 0 0 0;
+    list-style: none;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    font-weight: 400;
+    p {
+        margin: 2rem 0 0 0;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+// .source {
+//     padding: 7rem 0;
+//     width: 100%;
+//     background-color: #fff;
+// }
+// .source__title {
+//     margin: 0;
+//     font-size: 3rem;
+//     line-height: 1.4;
+//     font-weight: 600;
+//     font-family: 'Panton';
+//     color: $red;
+// }
+// .source__list {
+//     margin: 3rem 0 0 0;
+//     padding: 0;
+//     list-style: none;
+//     counter-reset: myCounter;
+//     font-size: 1.4rem;
+//     line-height: 1.25;
+//     font-weight: 400;
+//     li {
+//         &:before {
+//             counter-increment: myCounter;
+//             content: counter(myCounter) ".";
+//             margin: 0 .5rem 0 0;
+//         }
+//     }
+// }
+.mfp-close-btn-in .popup .mfp-close {
+    color: $red;
+    font-size: 50px;
+}
+
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .specification {
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 0;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255,255,255, .6);
+        }
+    }
+    .specification__box {
+        position: relative;
+        z-index: 1;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

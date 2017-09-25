@@ -1,0 +1,91 @@
+.carefully {
+    padding: 6rem 0 3rem 0;
+    overflow: hidden;
+}
+.carefully__container {
+
+}
+.carefully__box {
+    display: flex;
+    align-items: center;
+}
+.carefully__img {
+    flex: 0 1 auto;
+    align-self: center;
+    width: 55%;
+    margin: 0 0 0 -20%;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.carefully__content {
+    flex: 0 1 auto;
+    width: 60%;
+    margin: 0 0 0 5%;
+    padding: 0;
+    list-style: none;
+}
+.carefully__text {
+    margin: 5rem 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+.carefully__item {
+    margin: 2rem 0 0 0;
+}
+.carefully__item-title {
+    display: block;
+    font-size: 3.5rem;
+    line-height: 1.25;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $pink;
+    background-color: rgba(255, 255, 255, 0);
+}
+.carefully__item-text {
+    margin: 1rem 0 0 0;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    font-weight: 400;
+}
+
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .carefully__box {
+        display: block;
+    }
+    .carefully__img {
+        margin: 0;
+        width: auto;
+        text-align: center;
+    }
+    .carefully__content {
+        margin: 4rem 0 0 0;
+        width: auto;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

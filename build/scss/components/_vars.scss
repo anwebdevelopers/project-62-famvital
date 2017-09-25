@@ -1,0 +1,28 @@
+@import "bourbon";
+
+$red: #e4004d;
+@mixin btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: default;
+}
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+// -webkit-appearance: none;
+// -moz-appearance: none;
+// -ms-appearance: none;
+// -o-appearance: none;
+// appearance: none!important;
+
+// &::-ms-expand {
+//     display: none;
+// }

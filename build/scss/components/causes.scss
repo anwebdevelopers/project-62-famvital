@@ -1,0 +1,122 @@
+.causes {
+    padding: 6rem 0 3rem 0;
+    overflow: hidden;
+}
+.causes__container {
+
+}
+.causes__box {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.causes__undertitle {
+    margin: 2rem 0 0 0;
+    font-size: 2.6rem;
+    line-height: 1.25;
+    font-weight: 600;
+    font-family: 'Panton';
+    color: $pink;
+}
+.causes__content {
+    position: relative;
+    z-index: 1;
+    flex: 0 1 auto;
+    width: 50%;
+}
+.causes__text {
+    margin: 4rem -15% 0 -15%;
+    padding: 14rem 22%;
+    background-image: url(../img/bg-causes-text.png);
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.causes__heading {
+    margin: 0;
+    font-size: 3.3rem;
+    line-height: 1.25;
+    font-weight: 600;
+    font-family: 'Panton';
+    color: #fff;
+    text-shadow: 1px 1px 0 $pink;
+}
+.causes__list {
+    margin: 5rem 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+.causes__list-item {
+    position: relative;
+    padding: 0 0 0 4rem;
+    margin: 2rem 0 0 0;
+}
+.causes__list-icon {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+.causes__list-text {
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px 0 $pink;
+}
+.causes__img {
+    flex: 0 1 auto;
+    width: 75%;
+    margin: 0 -15% 0 -10%;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .causes__box {
+        display: block;
+    }
+    .causes__img {
+        width: auto;
+        margin: 0;
+        text-align: center;
+    }
+    .causes__content {
+        margin: 4rem 0 0 0;
+        width: auto;
+    }
+    .causes__text {
+        margin: 4rem 0 0 0;
+        width: auto;
+        padding: 14rem 14%;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

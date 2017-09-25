@@ -1,0 +1,116 @@
+.questions {
+    padding: 6rem 0 12rem 0;
+}
+.questions__container {
+
+}
+.questions__title {
+
+}
+.questions__undertitle {
+    margin: 4rem 0 0 0;
+    font-size: 3.8rem;
+    line-height: 1;
+    font-weight: 600;
+    font-family: 'Panton';
+    color: $pink;
+}
+.questions__text {
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1;
+    font-weight: 600;
+    font-family: 'Panton';
+    color: $pink;
+}
+.questions__list {
+    margin: 3rem 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+.questions__item {
+    position: relative;
+    margin: 6rem 0 0 0;
+    padding: 0 0 0 3rem;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 1.5rem;
+        left: 0;
+        width: .7rem;
+        height: .3rem;
+        background-color: $blue;
+        border-radius: .3rem;
+    }
+}
+.questions__item-title {
+    margin: 0;
+    font-size: 2.6rem;
+    line-height: 1.25;
+    font-weight: 600;
+    font-family: 'Panton';
+}
+.questions__item-text {
+    margin: 3rem 0 0 0;
+    font-size: 1.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+.questions__bottom-box {
+    margin: 12rem 0 0 0;
+}
+.questions__bottom-title {
+    margin: 0;
+    font-size: 3.8rem;
+    line-height: 1.25;
+    font-weight: 600;
+    font-family: 'Panton';
+    color: $pink;
+}
+.questions__bottom-wrap {
+    margin: 3rem 0 0 0;
+    display: flex;
+    align-items: center;
+}
+.questions__button {
+    flex: 0 0 auto;
+}
+.questions__bottom-text {
+    flex: 1 1 auto;
+    margin: 0 0 0 2rem;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    font-weight: 400;
+}
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .questions__bottom-wrap {
+        display: block;
+    }
+    .questions__bottom-text {
+        margin: 2rem 0 0 0;
+    }
+}
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

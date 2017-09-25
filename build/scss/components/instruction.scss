@@ -1,0 +1,217 @@
+.instruction {
+    position: relative;
+    padding: 44rem 0 8rem 0;
+    background-color: #fef5f7;
+}
+.instruction__container {
+
+}
+.instruction__title {
+    text-align: center;
+}
+.instruction__undertitle {
+    margin: 4rem 0 0 0;
+    font-size: 2.6rem;
+    line-height: 1.25;
+    font-weight: 600;
+	font-family: 'Panton';
+	color: $blue;
+    text-align: center;
+    span {
+        color: $pink;
+    }
+}
+.instruction__list {
+    margin: 7rem 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+.instruction__item {
+    position: relative;
+    width: 50%;
+    margin: 0 50% 0 0;
+    padding: 0 8rem 9rem 0;
+    text-align: right;
+    &:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transform: translateX(50%);
+        width: 4px;
+        background-image: radial-gradient(circle closest-side, #ead2d7 0%, rgba(255,255,255,0) 100%);
+        background-size: 4px 4px;
+        background-repeat: repeat-y;
+    }
+    &:nth-child(even) {
+        align-self: flex-end;
+        margin: 0 0 0 50%;
+        padding: 0 0 9rem 8rem;
+        text-align: left;
+        &:before {
+            right: auto;
+            left: 0;
+            transform: translateX(-50%);
+        }
+        .instruction__item-icon {
+            right: auto;
+            left: 0;
+            transform: translateX(-50%);
+            &:before {
+                background-image: url(../img/bg-icon-spot-pink.png);
+            }
+        }
+    }
+    &:nth-child(3n+1) {
+        .instruction__item-icon {
+            &:before {
+                transform: rotate(45deg);
+            }
+        }
+    }
+    &:nth-child(3n+2) {
+        .instruction__item-icon {
+            &:before {
+                transform: rotate(90deg)
+            }
+        }
+    }
+    &:nth-child(3n+3) {
+        .instruction__item-icon {
+            &:before {
+                transform: rotate(135deg);
+            }
+        }
+    }
+    &:nth-child(3n+4) {
+        .instruction__item-icon {
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &:last-child {
+        &:before {
+            display: none;
+        }
+    }
+}
+.instruction__item-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(50%);
+    width: 8rem;
+    height: 8rem;
+    line-height: 8rem;
+    margin: 0;
+    text-align: center;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        background-image: url(../img/bg-icon-spot-blue.png);
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    i[class^="icon-"] {
+        position: relative;
+        z-index: 1;
+    }
+}
+.instruction__item-text {
+    margin: 0;
+    font-size: 2.6rem;
+    line-height: 1.25;
+    font-weight: 600;
+    font-family: 'Panton';
+}
+.instruction__text {
+    margin: 7rem 0 0 0;
+    font-size: 1.9rem;
+    line-height: 1.6;
+    font-weight: 400;
+    text-align: center;
+}
+.map {
+    padding: 10rem 0 0 0;
+}
+.map__title {
+    text-align: center;
+    span {
+        color: $pink;
+    }
+}
+.map__box {
+    margin: 9rem 0 0 0;
+    height: 54rem;
+}
+@media only screen and (max-width : 1400px) {
+
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .instruction__list {
+        display: block;
+    }
+    .instruction__item {
+        width: auto;
+        margin: 0;
+        padding: 0 0 9rem 10rem;
+        text-align: left;
+        &:nth-child(even) {
+            margin: 0;
+            padding: 0 0 9rem 10rem;
+            &:before {
+                left: 4rem;
+            }
+            .instruction__item-icon {
+                transform: translateX(0);
+            }
+        }
+        &:before {
+            right: auto;
+            left: 4rem;
+            transform: translateX(-50%);
+        }
+        .instruction__item-icon {
+            top: -1rem;
+            right: auto;
+            left: 0;
+            transform: translateX(0);
+        }
+    }
+    .instruction__item-text {
+        br {
+            display: none;
+        }
+    }
+}
+
+
+@media only screen and (max-width : 480px) {
+
+}
+
+@media only screen and (max-width : 360px) {
+
+}

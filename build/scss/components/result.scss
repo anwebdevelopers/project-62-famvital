@@ -1,0 +1,120 @@
+.result {
+    padding: 7rem 0;
+    background-color: #f4f4f4;
+}
+.result__box {
+    margin: 7rem 0 0 0;
+
+    position: relative;
+}
+.result__img {
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    max-height: 100%;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+.result__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.result__list-item {
+    flex: 0 0 auto;
+    width: 30%;
+    margin: 4rem 0 0 0;
+    // padding: 0 4rem 0 0;
+    &:nth-child(odd) {
+        text-align: right;
+        // &:before {
+        //     right: 0;
+        // }
+    }
+    &:nth-child(even) {
+        // padding: 0 0 0 4rem;
+        margin-left: 40%;
+        // &:before {
+        //     left: 0;
+        // }
+    }
+}
+.result__list-title {
+    margin: 0;
+    font-size: 2.4rem;
+    color: $red;
+}
+.result__list-text {
+    margin: 2rem 0 0 0;
+    line-height: 1.6;
+}
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+    .result__img {
+        display: none;
+    }
+    .result__list {
+        margin: 7rem 0 0 0;
+    }
+    .result__list-item {
+        width: 47.5%;
+
+        padding: 0 0 0 3rem;
+        &:nth-child(odd) {
+            text-align: inherit;
+        }
+        &:nth-child(even) {
+            margin-left: 5%;
+        }
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: .8rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: $red;
+        }
+    }
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+    .result__list {
+        display: block;
+    }
+    .result__list-item {
+        width: auto;
+        &:nth-child(even) {
+            margin-left: 0;
+        }
+    }
+}
+
+@media only screen and (max-width : 380px) {
+
+}
