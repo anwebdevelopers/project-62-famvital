@@ -34,35 +34,36 @@
     }
 }
 
-// .source {
-//     padding: 7rem 0;
-//     width: 100%;
-//     background-color: #fff;
-// }
-// .source__title {
-//     margin: 0;
-//     font-size: 3rem;
-//     line-height: 1.4;
-//     font-weight: 600;
-//     font-family: 'Panton';
-//     color: $red;
-// }
-// .source__list {
-//     margin: 3rem 0 0 0;
-//     padding: 0;
-//     list-style: none;
-//     counter-reset: myCounter;
-//     font-size: 1.4rem;
-//     line-height: 1.25;
-//     font-weight: 400;
-//     li {
-//         &:before {
-//             counter-increment: myCounter;
-//             content: counter(myCounter) ".";
-//             margin: 0 .5rem 0 0;
-//         }
-//     }
-// }
+.source {
+    padding: 7rem 0;
+    width: 100%;
+    background-color: #fff;
+}
+.source__title {
+    margin: 0;
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: 600;
+    font-family: 'PT Serif';
+    color: $red;
+}
+.source__list {
+    margin: 3rem 0 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: source-counter;
+    font-size: 1.4rem;
+    line-height: 1.25;
+    font-weight: 400;
+    li {
+        margin: .5rem 0 0 0;
+        &:before {
+            counter-increment: source-counter;
+            content: counter(source-counter) ".";
+            margin: 0 .5rem 0 0;
+        }
+    }
+}
 .mfp-close-btn-in .popup .mfp-close {
     color: $red;
     font-size: 50px;

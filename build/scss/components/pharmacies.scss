@@ -1,0 +1,71 @@
+.pharmacies {
+    padding: 7rem 0;
+    background-color: #fcfcfc;
+}
+.pharmacies__text {
+    margin: 2rem 0 0 0;
+}
+.pharmacies__list {
+    margin: 7rem 0 0 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    li {
+        flex:  0 0 auto;
+        width: 20%;
+        margin: 0 2.5% 3rem 2.5%;
+        text-align: center;
+        &:hover, &:active {
+            img {
+                transform: scale(.9);
+            }
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            transition: all .5s ease;
+        }
+    }
+}
+
+@media only screen and (max-width : 1280px) {
+
+}
+
+@media only screen and (max-width : 992px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+    .pharmacies__list {
+        li {
+            width: 28.33%;
+        }
+    }
+}
+
+@media only screen and (max-width : 480px) {
+    .pharmacies__list {
+        li {
+            width: 40%;
+            margin: 0 5% 3rem 5%;
+        }
+    }
+}
+
+@media only screen and (max-width : 380px) {
+
+}

@@ -106,9 +106,13 @@ a {
         color: $red;
     }
 }
-// .title_color_blue {
-// 	color: $blue;
-// }
+.pretitle {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-family: 'PT Serif';
+}
 .subtitle {
 	margin: 4rem 0 0 0;
 	font-size: 3rem;
@@ -126,14 +130,12 @@ a {
 @import "components/result.scss";
 @import "components/action.scss";
 @import "components/formula.scss";
-
-// @import "components/effects.scss";
-// @import "components/carefully.scss";
-// @import "components/causes.scss";
-
-// @import "components/instruction.scss";
-// @import "components/questions.scss";
-// @import "components/footer.scss";
+@import "components/element.scss";
+@import "components/instruction.scss";
+@import "components/buy.scss";
+@import "components/pharmacies.scss";
+@import "components/questions.scss";
+@import "components/footer.scss";
 @import "components/popup.scss";
 
 @media only screen and (max-width : 1280px) {

@@ -19,11 +19,6 @@
 }
 
 .advantages__pretitle {
-    margin: 0;
-    font-size: 3.5rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    font-family: 'PT Serif';
     color: #fff;
 }
 
@@ -146,10 +141,6 @@
 }
 
 @media only screen and (max-width : 768px) {
-
-}
-
-@media only screen and (max-width : 640px) {
     .advantages {
         &:before {
             display: none;
@@ -176,6 +167,10 @@
         margin: 10rem 0 0 0;
         width: auto;
     }
+}
+
+@media only screen and (max-width : 640px) {
+
 }
 
 @media only screen and (max-width : 480px) {

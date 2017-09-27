@@ -28,24 +28,51 @@ $(function() {
     // Плавный скролл
     //------------------------------------------------
 
-    $(".scroll").click(function(e) {
+    $('.header__menu-list a, .scroll').click(function(e) {
         e.preventDefault();
         var thisSect = $($(this).attr('href')).offset().top;
         $('html, body').animate({scrollTop: thisSect }, ((Math.abs(thisSect - $(window).scrollTop()) * 0.1) + 600), 'swing');
     });
 
     //---------------------------------------------
-    //Аккордеон technologi
+    //accordeon
     //---------------------------------------------
-    // var $formulaAccordeon = $('.formula__accordeon'),
-    //     //$questionsPoint = $('.questions__point'),
-    //     $formulaAccordeonBox = $('.formula__accordeon-box');
-    //
-    // $formulaAccordeon.not(':first').find($formulaAccordeonBox).hide();
-    //
-    // $formulaAccordeon.on('click', '.formula__accordeon-title', function() {
-    //     $(this).closest($formulaAccordeon).addClass('active').find($formulaAccordeonBox).slideDown(300).end().siblings().removeClass('active').find($formulaAccordeonBox).slideUp(300);
-    // });
+    var $accordeon = $('.accordeon'),
+        $accordeonBox = $('.accordeon__box');
+    $accordeon.each(function() {
+        var $this = $(this);
+        $this.is(':first-child') ? $this.addClass('active') : $this.find($accordeonBox).hide();
+    });
+    $accordeon.on('click', '.accordeon__title', function() {
+        $(this).closest($accordeon).addClass('active').find($accordeonBox).slideDown(300).end().siblings().removeClass('active').find($accordeonBox).slideUp(300);
+    });
+
+
+    //---------------------------------------------
+    //formula images
+    //---------------------------------------------
+
+    $('.formula__box').each(function() {
+        var $this = $(this),
+            $formula__item = $(this).find('.formula__item');
+        $this.prepend('<div class="formula__img"><img src="' + $formula__item.first().attr('data-src') + '"></div><div class="formula__content"></div>');
+        $formula__item.each(function() {
+            var $this = $(this);
+            $this.appendTo($this.closest('.formula__box').find('.formula__content'));
+        });
+    });
+
+    $('.formula__content').on('click', '.formula__item', function() {
+        var $this = $(this),
+            url = $this.attr('data-src'),
+            $img = $this.closest('.formula__box').find('.formula__img img');
+        $img.css({'opacity' : '0','transform' : 'scale(0)'});
+        setTimeout(function() {
+            $img.attr('src', url).css({'opacity' : '1','transform' : 'scale(1)'});
+        }, 300);
+    });
+
+
 
     //-----------------------------------------------
     //popup
@@ -106,6 +133,22 @@ $(function() {
     });
 
 
+    //---------------------------------------------
+    //preload images
+    //---------------------------------------------
+
+    $.fn.preload = function() {
+        this.each(function(){
+            $('<img/>')[0].src = this;
+        });
+    }
+    var preloadImages = [];
+    $('.formula__item').each(function(){
+        preloadImages.push($(this).attr('data-src'));
+    });
+    $(preloadImages).preload();
+
+
     //-------------------------------
     // Google Map
     //-------------------------------
@@ -113,26 +156,20 @@ $(function() {
     if(typeof google === 'object' && typeof google.maps === 'object' && $('#map').length) {
 
         var markerPositions = new Array();
-        	markerPositions[1] = new google.maps.LatLng(55.761742, 37.593182);
-        	markerPositions[2] = new google.maps.LatLng(55.759397, 37.604345);
-            markerPositions[3] = new google.maps.LatLng(55.763078, 37.616594);
-            markerPositions[4] = new google.maps.LatLng(55.764439, 37.636888);
-            markerPositions[5] = new google.maps.LatLng(55.759188, 37.644919);
-            markerPositions[6] = new google.maps.LatLng(55.756583, 37.628483);
-            markerPositions[7] = new google.maps.LatLng(55.752151, 37.610456);
-            markerPositions[8] = new google.maps.LatLng(55.749501, 37.592544);
-            markerPositions[9] = new google.maps.LatLng(55.747136, 37.617824);
-            markerPositions[10] = new google.maps.LatLng(55.749783, 37.632884);
-            markerPositions[11] = new google.maps.LatLng(55.749491, 37.646751);
+        	markerPositions[1] = new google.maps.LatLng(57.695551, 39.783253);
+        	markerPositions[2] = new google.maps.LatLng(57.641033, 39.783253);
+            markerPositions[3] = new google.maps.LatLng(57.643823, 39.853336);
+            markerPositions[4] = new google.maps.LatLng(57.665205, 39.928052);
+            markerPositions[5] = new google.maps.LatLng(57.619947, 39.878820);
 
 
         function initialMap() {
             var loc, map;
 
-            loc = new google.maps.LatLng(55.756148, 37.620897);
+            loc = new google.maps.LatLng(57.661197, 39.856271);
 
-            map = new google.maps.Map(document.getElementById("map_canvas"), {
-                 zoom: 14,
+            map = new google.maps.Map(document.getElementById('map'), {
+                 zoom: 11,
                  center: loc,
                  mapTypeId: google.maps.MapTypeId.ROADMAP,
                  scrollwheel: false
@@ -150,7 +187,7 @@ $(function() {
               });
             }
 
-            map.set('styles', [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ccc"},{"lightness":20},{"saturation":-97}]}]);
+            map.set('styles', [{'featureType':'landscape','stylers':[{'saturation':-100},{'lightness':65},{'visibility':'on'}]},{'featureType':'poi','stylers':[{'saturation':-100},{'lightness':51},{'visibility':'simplified'}]},{'featureType':'road.highway','stylers':[{'saturation':-100},{'visibility':'simplified'}]},{'featureType':'road.arterial','stylers':[{'saturation':-100},{'lightness':30},{'visibility':'on'}]},{'featureType':'road.local','stylers':[{'saturation':-100},{'lightness':40},{'visibility':'on'}]},{'featureType':'transit','stylers':[{'saturation':-100},{'visibility':'simplified'}]},{'featureType':'administrative.province','stylers':[{'visibility':'off'}]},{'featureType':'water','elementType':'labels','stylers':[{'visibility':'on'},{'lightness':-25},{'saturation':-100}]},{'featureType':'water','elementType':'geometry','stylers':[{'hue':'#ccc'},{'lightness':20},{'saturation':-97}]}]);
         }
         initialMap();
         google.maps.event.addDomListener(window, 'load', initialMap);

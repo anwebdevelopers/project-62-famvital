@@ -1,20 +1,51 @@
 .formula {
     padding: 7rem 0;
     background-color: #fcfcfc;
+    &.formula_night {
+        color: #fff;
+        background-color: #21252c;
+        background-image: url(../img/bg-formula-night.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
 }
 .formula__box {
     margin: 7rem 0 0 0;
 
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
-.formula__accordeon {
+.formula__item {
     margin: 2rem 0 0 0;
     &.active {
-        .formula__accordeon-title {
+        .formula__item-title {
             color: $red;
         }
     }
 }
-.formula__accordeon-title {
+.formula__content {
+    flex: 0 0 auto;
+    width: 46%;
+}
+.formula__img {
+    margin: 0;
+    flex: 0 0 auto;
+    width: 52%;
+    margin: 0 0 0 2%;
+    img {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        transition: all .3s ease;
+    }
+}
+.formula__item {
+    flex: 0 0 auto;
+    width: 100%;
+}
+.formula__item-title {
     margin: 0;
     font-size: 2.4rem;
     transition: all .5s ease;
@@ -23,29 +54,31 @@
     }
     cursor: default;
 }
-.formula__accordeon-box {
-    display: flex;
-    //align-items: center;
-}
-.formula__accordeon-content {
-    flex: 0 0 auto;
-    width: 46%;
+.formula__item-content {
+    padding: 1px 0;
     font-size: 1.8rem;
     line-height: 1.8;
+
     >* {
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
-}
-.formula__accordeon-img {
-    margin: 0;
-    flex: 0 0 auto;
-    width: 48%;
-    margin: 0 0 0 6%;
-    img {
-        max-width: 100%;
-        width: auto;
-        height: auto;
+    ul {
+        padding: 0;
+        list-style: none;
+        li {
+           position: relative;
+           &:before {
+               content: '';
+               display: inline-block;
+               vertical-align: middle;
+               width: .5rem;
+               height: .5rem;
+               margin: 0 1rem 0 0;
+               background-color: $red;
+               border-radius: 50%;
+           }
+       }
     }
 }
 @media only screen and (max-width : 1280px) {
